@@ -109,13 +109,7 @@ const Nav = () => {
             </>
           ) : (
             <>
-              <Link
-                href="/login"
-                className="hover:text-yellow-300 transition"
-                onClick={() => setIsOpen(false)}
-              >
-                Login
-              </Link>
+             
               <Link
                 href="/register"
                 className="hover:text-red-500 transition"
