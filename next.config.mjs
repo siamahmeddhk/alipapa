@@ -2,7 +2,7 @@
 
 const nextConfig = {
   images: {
-    domains: ["images.unsplash.com"], // ✅ allow Unsplash images
+    domains: ["images.unsplash.com", "plus.unsplash.com"], // ✅ allow Unsplash images
   },
 };
 export default nextConfig;

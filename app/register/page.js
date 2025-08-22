@@ -15,7 +15,7 @@ const RegisterPage = () => {
       email,
       password,
       redirect: true,
-      callbackUrl: "/", // where user goes after login
+      callbackUrl: "/products", // where user goes after login
     });
   };
 
