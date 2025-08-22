@@ -28,31 +28,65 @@ Based on your project's file structure, here is a structural and hierarchical su
 
 Markdown
 
-### Route Summary (Structural)
+### Route Summary
+This is a summary of the routes and pages in your Next.js project. You can copy and paste this directly into your documentation.
 
-Your project uses the Next.js App Router, where each folder within the `app` directory represents a segment of the URL path, and a `page.js` file defines the content for that route.
+Landing Page
 
-📦 app/
-├── 📄 page.js                 # Landing Page (/)
-│   └── Publicly accessible.
-│
-├── 📦 login/
-│   └── 📄 page.js             # Login Page (/login)
-│       └── Publicly accessible.
-│
-├── 📦 register/
-│   └── 📄 page.js             # Registration Page (/register)
-│       └── Publicly accessible.
-│
-├── 📦 products/
-│   ├── 📄 page.js             # Product List Page (/products)
-│   │   └── Publicly accessible.
-│   │
-│   └── 📦 [id]/
-│       └── 📄 page.js         # Product Details Page (/products/[id])
-│           └── Publicly accessible.
-│
-└── 📦 dashboard/
-└── 📦 add-product/
-└── 📄 page.js         # Protected Page: Add Product (/dashboard/add-product)
-└── Protected. Only accessible to authenticated users.
+URL: /
+
+File Path: app/page.js
+
+Description: The main homepage of the application, featuring a Hero section, product highlights, and a footer.
+
+Access: Publicly accessible to all users.
+
+Product List Page
+
+URL: /products
+
+File Path: app/products/page.js
+
+Description: Displays a comprehensive list of all products fetched from the database.
+
+Access: Publicly accessible to all users.
+
+Product Details Page
+
+URL: /products/[id]
+
+File Path: app/products/[id]/page.js
+
+Description: A dynamic route that shows detailed information for a single product. The [id] segment represents a unique product ID.
+
+Access: Publicly accessible to all users.
+
+Login Page
+
+URL: /login
+
+File Path: app/login/page.js
+
+Description: Handles user authentication using NextAuth.
+
+Access: Publicly accessible to all users.
+
+Registration Page
+
+URL: /register
+
+File Path: app/register/page.js
+
+Description: Allows new users to create an account.
+
+Access: Publicly accessible to all users.
+
+Protected Page: Add Product
+
+URL: /dashboard/add-product
+
+File Path: app/dashboard/add-product/page.js
+
+Description: A private page containing a form to add new products. Access is restricted.
+
+Access: Protected. Requires a logged-in user session. Unauthenticated users will be redirected to the login page.
