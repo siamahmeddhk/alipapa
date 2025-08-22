@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Alipapa store
 
-## Getting Started
+live link: https://alipapa.vercel.app/
 
-First, run the development server:
+A full-stack e-commerce application built with Next.js, Tailwind CSS, and NextAuth. This project features a modern and responsive user interface, authentication, and product management functionalities.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Project Description
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This application serves as a comprehensive e-commerce platform. It provides a seamless shopping experience for users while offering a protected dashboard for authenticated users to manage products.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+**Key Features:**
+- **Authentication:** Secure user authentication using NextAuth, supporting both credential and social logins (e.g., Google).
+- **Product Catalog:** Browse a list of products and view detailed information for each item.
+- **Protected Routes:** A dedicated dashboard for adding new products, accessible only to authenticated users.
+- **Modern UI:** Built with Tailwind CSS for a sleek, responsive, and customizable design.
+- **Server-Side Rendering (SSR):** Leverages Next.js for performance and SEO benefits.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Setup & Installation
 
-## Learn More
+Follow these steps to get the project up and running on your local machine.
 
-To learn more about Next.js, take a look at the following resources:
+### Prerequisites
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Node.js (v18 or higher)
+- npm or yarn
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Based on your project's file structure, here is a structural and hierarchical summary of your application's routes. This format clearly shows how the URL paths map to your Next.js App Router files.
 
-## Deploy on Vercel
+Markdown
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Route Summary (Structural)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Your project uses the Next.js App Router, where each folder within the `app` directory represents a segment of the URL path, and a `page.js` file defines the content for that route.
+
+📦 app/
+├── 📄 page.js                 # Landing Page (/)
+│   └── Publicly accessible.
+│
+├── 📦 login/
+│   └── 📄 page.js             # Login Page (/login)
+│       └── Publicly accessible.
+│
+├── 📦 register/
+│   └── 📄 page.js             # Registration Page (/register)
+│       └── Publicly accessible.
+│
+├── 📦 products/
+│   ├── 📄 page.js             # Product List Page (/products)
+│   │   └── Publicly accessible.
+│   │
+│   └── 📦 [id]/
+│       └── 📄 page.js         # Product Details Page (/products/[id])
+│           └── Publicly accessible.
+│
+└── 📦 dashboard/
+└── 📦 add-product/
+└── 📄 page.js         # Protected Page: Add Product (/dashboard/add-product)
+└── Protected. Only accessible to authenticated users.
