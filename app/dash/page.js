@@ -214,7 +214,7 @@ export default function DashboardPage() {
   // Fetch products from backend
   const fetchProducts = async () => {
     try {
-      const res = await fetch("/api/product", { cache: "no-store" });
+      const res = await fetch("/api/products", { cache: "no-store" });
       const data = await res.json();
       console.log("Fetched products:", data); // Debug the data
       setProducts(data);
