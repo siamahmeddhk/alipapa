@@ -74,19 +74,14 @@ const RegisterPage = () => {
 
         {/* Google Login */}
         <button
-          onClick={() => signIn("google", { callbackUrl: "/" })}
+          onClick={() => signIn("google", { callbackUrl: "/products" })}
           className="w-full px-6 py-3 rounded-2xl bg-white text-black font-semibold hover:bg-gray-200 transition"
         >
           Continue with Google
         </button>
 
         {/* Switch to Login */}
-        <p className="mt-6 text-center text-gray-200">
-          Already have an account?{" "}
-          <Link href="/login" className="text-yellow-300 hover:underline">
-            Login here
-          </Link>
-        </p>
+       
       </motion.div>
     </section>
   );
